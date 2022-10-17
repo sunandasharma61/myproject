@@ -5,6 +5,17 @@ let printSomething = function() {
     return "done"
 }
 
+
+let welcome = function() {
+    console.log("welcome to my application. I am Sunanda Sharma and im a part of functionup lithium cohort")
+    return "done"
+    }
+
+
+
 let abc = 2022
 module.exports.myUrl = url
 module.exports.myFunction = printSomething
+module.exports.welcome1=welcome
+
+
