@@ -48,15 +48,15 @@ router.get('/test-me', function (req, res) {   //Calling the components of a dif
 
 
 
-// const Num1=[2,5,4,2,7,47,7,28,3,48,57,28,8]
-// console.log(lodash.union(Num1));
-// const keyValue=[['horror','The Shining'],['drama','Titanic'],['thriller','Shutter Island'],['fantasy','Pans Labyrinth']]
-// console.log(lodash.fromPairs(keyValue));
+const Num1=[2,5,4,2,7,47,7,28,3,48,57,28,8]
+console.log(lodash.union(Num1));
+const keyValue=[['horror','The Shining'],['drama','Titanic'],['thriller','Shutter Island'],['fantasy','Pans Labyrinth']]
+console.log(lodash.fromPairs(keyValue));
 
     
-   // res.send('My second api!')  //To be tried what happens if we send multiple response
+   res.send('My second api!')  //To be tried what happens if we send multiple response
 });
 
-module.exports = router
+module.exports = router;
 
 

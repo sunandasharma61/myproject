@@ -8,3 +8,6 @@ const lowr = function(){ return str.toLowerCase()}
 module.exports.tr1 = tr
 module.exports.upr1 =upr
 module.exports.lowr1 =lowr
+
+
+
