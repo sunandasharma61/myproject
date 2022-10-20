@@ -17,65 +17,65 @@ const router = express.Router();
 // });
 
 //PROBLEM2 consecutive number
-router.get('/sol2',function(req,res){
-  let arr=[34,35,37,38,39]
- let missingNumber=0;
-   for(let i=0;i<arr.length;i++){
-     if (arr[i]+1!==arr[i+1]){
-      missingNumber=arr[i]+1; 
-      break;
-     }
-     console.log("missing number is ",missingNumber)
-    }
-     res.send(`the  missing number is ${missingNumber}`);
-  });
+// router.get('/sol2',function(req,res){
+//   let arr=[34,35,37,38,39]
+//  let missingNumber=0;
+//    for(let i=0;i<arr.length;i++){
+//      if (arr[i]+1!==arr[i+1]){
+//       missingNumber=arr[i]+1; 
+//       break;
+//      }
+//      console.log("missing number is ",missingNumber)
+//     }
+//      res.send(`the  missing number is ${missingNumber}`);
+  //});
 
 
 // //PROBLEM3  
-// let players =[{
-//   name: "manish",
-//   dob: "1/1/1995",
-//   gender: "male",
-//   city: "jalandhar",
-//   sports: [
-//   "swimming"
-//   ]
-//   },
+let players =[{
+  name: "manish",
+  dob: "1/1/1995",
+  gender: "male",
+  city: "jalandhar",
+  sports: [
+  "swimming"
+  ]
+  },
   
-//   {
-//     name: "gopal",
-//     dob: "1/09/1995",
-//     gender: "male",
-//     city: "delhi",
-//     sports: [
-//     "soccer"
-//     ]
-//     }
-//    ,
-//     {
-//       name: "lokesh",
-//       dob: "1/1/1990",
-//       gender: "male",
-//       city: "mumbai",
-//       sports: [
-//           "soccer"
-//       ]
-//   }
-// ]
-// router.post('/players',function (req,res){
-// let newPlayer=req.body
-// for(let i=0;i<players.length;i++){
-// let player1 =players[i]
-// if(player1.name==newPlayer.name){
-//   res.send("player already exist")
-// }
-// else{
-//   players.push(newPlayer)
-//   res.send({data:players,status:true})
-// }
-// }
-//   res.send({data : players,status: true})
-// })
+  {
+    name: "gopal",
+    dob: "1/09/1995",
+    gender: "male",
+    city: "delhi",
+    sports: [
+    "soccer"
+    ]
+    }
+   ,
+    {
+      name: "lokesh",
+      dob: "1/1/1990",
+      gender: "male",
+      city: "mumbai",
+      sports: [
+          "soccer"
+      ]
+  }
+]
+router.post('/players',function (req,res){
+let newPlayer=req.body
+for(let i=0;i<players.length;i++){
+let player1 =players[i]
+if(player1.name===newPlayer.name){
+  res.send("player already exist")
+}
+else{
+  players.push(newPlayer)
+  res.send({data:players,status:true})
+}
+}
+  res.send({data : players,status: true})
+})
 
 
 // router.get('/students/:name', function(req, res) {
