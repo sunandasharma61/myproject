@@ -13,3 +13,5 @@ const getUsersData= async function (req, res) {
 
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
+
+
