@@ -4,7 +4,8 @@ const bookSchema = new mongoose.Schema( {
     bookName: String, 
     authorName: String, 
     tags: [String],
-    
+    year: {type:Number, default:2022},
+    totalPages:Number,
     isPublished: Boolean,
     prices: {
         indianPrice: String,
@@ -29,3 +30,5 @@ module.exports = mongoose.model('Book', bookSchema) //users
 // Object
 // ObjectId
 // Buffer - not cover
+
+
