@@ -21,7 +21,15 @@ mongoose.connect("mongodb+srv://user2001:dAtAbase2001user@cluster0.kcc7xh8.mongo
 //   }
 //   );
 
-
+app.use(
+    function(req,res,next){
+let ip=req.ip
+let url=req.url
+let ts=Date()
+console.log(ts,ip,url)
+res.send({ts:ts,ip:ip,route:url})
+    }
+);
   
 
 app.use('/', route);
