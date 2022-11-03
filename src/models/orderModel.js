@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
-const authorSchema = new mongoose.Schema( {
-    author_id : Number,
-    author_name: String,
-    age: Number,
-    address: String
+const orderSchema = new mongoose.Schema( {
+    userId : "String",
+    productId: "String",
+    amount: Number,
+    isFreeAppUser:Boolean,
+    date:Number,
 
 }, { timestamps: true });
 
-module.exports = mongoose.model('Author', authorSchema)
+module.exports = mongoose.model('order', orderSchema)
