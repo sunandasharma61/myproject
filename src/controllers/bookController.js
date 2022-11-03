@@ -28,11 +28,11 @@ const bookAuthor= async function (req, res) {
 
 }
 //------------------------4===================
-const attribute= async function(req, res){
-    let a=await publisherModel.find({publishername:["Penguin","HarperCollins"]}).select({_id:1});
-    let b=await bookModel.find({publishername:b}).select({_id:1});
+const coverupdate= async function(req, res){
+    var a=await publisherModel.find({publishername:["Penguin","HarperCollins"]}).select({_id:1});
+    var b=await bookModel.find({publishername:b}).select({_id:1});
     for (let index = 0; index < b.length; index++) {
-        const element = attribute[index];
+        const element = coverupdate[index];
         let newentry=await bookModel.findByIdAndUpdate(element,{$set:{isHardCover:true}})
 
         console.log(newentry)
@@ -46,7 +46,7 @@ const update=async function(req, res){
     let books=await bookModel.find({author:key}).select({_id:1})
     for (let index = 0; index < books.length; index++) {
         const element = books[index];
-        let update= await bookModel.findByIdAndUpdate(element,{$inc:{price:10}}, {new:true})
+        let update= await bookModel.findByIdAndUpdate(element,{$inc:{price:760}}, {new:true})
         console.log(update)
         
     }
@@ -56,5 +56,6 @@ const update=async function(req, res){
 module.exports.createBook = createBook
 module.exports.getBooksData = getBooksData
 module.exports.bookAuthor = bookAuthor
-module.exports.attribute = attribute
+module.exports.coverupdate = coverupdate
 module.exports.update = update
+

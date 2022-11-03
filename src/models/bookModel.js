@@ -11,10 +11,13 @@ const bookSchema = new mongoose.Schema( {
     
     publishername:{
         type: ObjectId,
-        ref: "Publisher"
-    }
+        ref: "Publisher",
+        isHardCover:true
+    },
+    ratings:Number,
+  
 
-}, { timestamps: true });
+}, { timestamps:Boolean });
 
 
 module.exports = mongoose.model('BookOne', bookSchema)
