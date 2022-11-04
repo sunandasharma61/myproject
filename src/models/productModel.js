@@ -1,12 +1,22 @@
 const mongoose = require('mongoose');
 
-const productSchema = new mongoose.Schema( {
-    name:"String",
-    category: "String",
+const productSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    category: String,
     price: {
-        type:Number,
-    required:true
-    }
-}, { timestamps: true });
+        type: Number,
+        required: true
 
-module.exports = mongoose.model('product', productSchema)
+    } //mandatory property
+})
+
+module.exports = mongoose.model('product', productSchema) //users
+
+
+
+// String, Number
+// Boolean, Object/json, array
+
