@@ -5,23 +5,27 @@ const orderSchema = new mongoose.Schema({
     userId:
     {
         type: ObjectId,
-        ref: "user"
+        ref: "User",
+        
+        requied:true,
     },
 
     productId: {
         type: ObjectId,
-        ref: "product"
+        ref: "Product",
+        requied:true,
     },
     amount: {
         type:Number,
+        requied:true,
     },
-    isFreeAppUser: Boolean,
-    date: "String"
+    isFreeAppUser:Boolean,
+    date: Date
 
 }, { timestamps: true });
 
 
-module.exports = mongoose.model('order', orderSchema) //users
+module.exports = mongoose.model('Order', orderSchema) //users
 
 
 

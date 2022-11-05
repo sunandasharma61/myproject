@@ -6,15 +6,24 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     balance: {
-        type:Number,
+        type: Number,
         default:100
     },
-    address: String,
-    age: Number,
-    gender: { type: String, enum: ["Male", "Female", "Other"] },
-    isFreeAppUser: { type: Boolean, default: false }
+    address: {
+        type: String,
+        required:true
+    },
+    age:{
+        type: String,
+        required:true
+    },
+    gender: { type: String,
+         enum: ["Male", "Female", "Other"]},
+    isFreeAppUser: {
+         type: Boolean,
+          default: false }
 
 }, { timestamps: true });
 
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('User', userSchema)
 

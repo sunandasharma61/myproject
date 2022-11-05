@@ -11,9 +11,10 @@ const productSchema = new mongoose.Schema({
         required: true
 
     } //mandatory property
-})
+ }, { timestamps: true });
 
-module.exports = mongoose.model('product', productSchema) //users
+
+module.exports = mongoose.model('Product', productSchema) //users
 
 
 
