@@ -13,7 +13,7 @@ const createOrder =async function(req,res){
 
     //Second validation is - objectid validation Productid
     if (!isValidObjectId(productId)){
-        return res.send({message:"productid is not valid objectis"})    
+        return res.send({message:"productid is not valid objectid"})    
     }
 
     //Third validation - objectid validation userid
@@ -26,7 +26,7 @@ const createOrder =async function(req,res){
     if (!userDetails){
         res.send({message:"user is not persent"})
     }
-
+// Fifth validation- product is present or not
     const productDetails = await productModel.findById(productId)
     if(!productDetails){
         res.send({message:"product is not persent"})
@@ -56,7 +56,7 @@ if(userDetails.balance<productDetails.price){
         date : new Date()
     }
     const order =await orderModel.create(orderDetails)
-    const currentBalance = await userModel.findByIdAndUpdate(userId,{$set:{balance:userDetails.balance- productDetails.price}})
+    const currentBalance = await userModel.findByIdAndUpdate(userId,{$set:{balance:userDetails.balance-productDetails.price}})
     return res.send({data: order, currentBalance:currentBalance})
 
 }
