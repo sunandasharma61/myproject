@@ -20,6 +20,6 @@ router.get("/cowin/getByDistrictIdAndDate",CowinController.getByDistrictIdAndDat
  
 router.get("/weatherDetails",CowinController.getWeather)
 
-router.post("/memes",CowinController.MemesById)
+router.post("/memes",CowinController.memesById)
 
 module.exports = router;

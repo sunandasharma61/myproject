@@ -1,4 +1,4 @@
-let axios = require("axios")
+const  axios = require("axios")
 
 
 let getStates = async function (req, res) {
@@ -96,7 +96,6 @@ let getByDistrictIdAndDate = async function (req, res) {
 }
 
 //  Assignment 2
-let axios = require("axios")
 let getWeather = async function(req,res){
     try {
         let arr =[]
@@ -121,7 +120,7 @@ let getWeather = async function(req,res){
 }
 
 //Assignment3
-let axios = require("axios")
+
 const memesById = async function(req,res){
     try{
         let username = req.query.username
